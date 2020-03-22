@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-img src="assets/LOGO_epiLamp_v3.png" routerLink="/home"></ion-img>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  color="primary">
+  <form  #form="ngForm" (ngSubmit)="register(form)">
+    <ion-grid>
+      <ion-row color="primary" justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+          <div text-center>
+            <h3>Registrieren</h3>
+          </div>
+          <div padding>
+            <ion-item>
+              <ion-input  name="name" type="text" placeholder="Vorname" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="lastname" type="text" placeholder="Nachname" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="street" type="text" placeholder="Straße" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="houseno" type="text" placeholder="Hausnummer" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="zip" type="num" placeholder="PLZ" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="city" type="text" placeholder="Stadt" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input  name="phone" type="tel" placeholder="Mobile" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="email" type="email" placeholder="dein@email.de"  ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input name="password_repeat" type="password" placeholder="Password again" ngModel required></ion-input>
+            </ion-item>
+          </div>
+          <div padding>
+            <ion-button  size="large" type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

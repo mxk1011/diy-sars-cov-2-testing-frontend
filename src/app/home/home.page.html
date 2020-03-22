@@ -1,20 +1,107 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      <ion-img src="assets/LOGO_epiLamp_v3.png"></ion-img>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div *ngIf="!loggedIn">
+    <ion-grid>
+      <ion-row>
+      <ion-col >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Wir brauchen ihre Daten</ion-card-subtitle>
+            <ion-card-title>Registrieren</ion-card-title>
+          </ion-card-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+          <ion-card-content>
+            <ion-button routerLink='/register'>
+              register</ion-button>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Melden Sie sich an</ion-card-subtitle>
+          <ion-card-title>Anmelden</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-button routerLink='/login'>login</ion-button>
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </div>
+  <div *ngIf="loggedIn">
+    <ion-grid>
+      <ion-row>
+        <ion-col >
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Sie möchten ein Test abgeben</ion-card-subtitle>
+              <ion-card-title>Testen</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <ion-button routerLink='/test'>
+                testen</ion-button>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Testergebnis sichren</ion-card-subtitle>
+              <ion-card-title>Ergebnis</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <ion-button routerLink='/results'>Ergebnis</ion-button>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col >
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Sie möchten sich abmelden</ion-card-subtitle>
+              <ion-card-title>Abmelden</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <ion-button (click)='logout()'>
+                Abmelden</ion-button>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+        <ion-col>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-subtitle>Sie haben Fragen</ion-card-subtitle>
+              <ion-card-title>Fragen</ion-card-title>
+            </ion-card-header>
+
+            <ion-card-content>
+              <ion-button routerLink='/faq'>FAQ</ion-button>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
   </div>
 </ion-content>

@@ -11,8 +11,8 @@ import { AuthResponse } from  './auth-response';
   providedIn: 'root'
 })
 export class AuthService {
-  AUTH_SERVER_ADDRESS:  string  =  //"https://app.epilamp.cpi.services";
-       'http://localhost:3000';
+  AUTH_SERVER_ADDRESS:  string  =  "https://app.epilamp.cpi.services";
+       //'http://localhost:3000';
   authSubject  =  new  BehaviorSubject(false);
   user : AuthResponse;
   constructor(private  httpClient:  HttpClient, private  storage:  Storage) { }

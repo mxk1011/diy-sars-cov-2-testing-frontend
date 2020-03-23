@@ -8,7 +8,12 @@ https://pad.riseup.net/p/DIY-SARS-CoV-2-testing
 
 The frontend is an ionic app. To get setup read the ionic getting started here: https://ionicframework.com/getting-started/
 
-Once ionic has been installed, you can run the app in a browser by running ``ìonic serve``
+Once ionic has been installed, you can run the app in a browser by running:
+
+````
+npm install (after first clone)
+ìonic serve
+````
 from the prompt.
 Ionic allows you to modify the app whilst the server is running. You can see the changes instantly.
 
@@ -28,5 +33,9 @@ git clone https://github.com/Maxiking1011/diy-sars-cov-2-testing-backend.git
 ## Addons
 
 two local express.js based servers are available for creating and developing 'mock' backend services for testing.
-To run those, change to the folder (name prefix lcl) and type ````npm start````.
+To run those, change to the folder (name prefix lcl) and type:
+````
+npm install
+npm start
+````
 

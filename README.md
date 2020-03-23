@@ -28,5 +28,5 @@ git clone https://github.com/Maxiking1011/diy-sars-cov-2-testing-backend.git
 ## Addons
 
 two local express.js based servers are available for creating and developing 'mock' backend services for testing.
-To run those, change to the folder (name prefix lcl) and type ````pm start````.
+To run those, change to the folder (name prefix lcl) and type ````npm start````.
 
